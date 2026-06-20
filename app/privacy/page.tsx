@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Flyby Shine | Privacy",
-  description: "Privacy policy for the Flyby Shine Amazon Associates site.",
+  description: "Privacy policy for the Flyby Shine revenue resource site.",
 };
 
 export default function PrivacyPage() {
@@ -10,15 +10,16 @@ export default function PrivacyPage() {
         <p style={styles.kicker}>Flyby Shine</p>
         <h1 style={styles.title}>Privacy Policy</h1>
         <p style={styles.text}>
-          This site is a simple Amazon Associates landing page. It does not intentionally collect
-          personal information through forms or user accounts.
+          This site shares Flyby Shine digital product, book and affiliate gear resources. It does
+          not intentionally collect personal information through forms or user accounts.
         </p>
         <p style={styles.text}>
           Like most websites, basic hosting logs may be processed by the platform operator
           to keep the site available and secure.
         </p>
         <p style={styles.text}>
-          If you click an Amazon or third-party link, that destination applies its own privacy practices.
+          If you click a Gumroad, Amazon, Apple Podcasts or other third-party link, that destination
+          applies its own privacy practices.
         </p>
       </div>
     </main>

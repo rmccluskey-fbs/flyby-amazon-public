@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Flyby Shine | Terms",
-  description: "Terms of use for the Flyby Shine Amazon Associates site.",
+  description: "Terms of use for the Flyby Shine revenue resource site.",
 };
 
 export default function TermsPage() {
@@ -10,17 +12,21 @@ export default function TermsPage() {
         <p style={styles.kicker}>Flyby Shine</p>
         <h1 style={styles.title}>Terms of Use</h1>
         <p style={styles.text}>
-          This website shares Amazon Associates links and curated gear lists for Flyby Shine.
-          By using the site, you agree to use the content for lawful business and research purposes only.
+          This website shares Flyby Shine digital product, book and affiliate gear resources. By
+          using the site, you agree to use the content for lawful business and research purposes only.
         </p>
         <p style={styles.text}>
-          Product availability, pricing and Amazon list contents can change without notice.
-          External links open Amazon or related services in a new tab.
+          Toolkit tiers, book availability, product pricing and Amazon list contents can change
+          without notice. External links open Gumroad, Amazon, Apple Podcasts or related services in
+          a new tab.
+        </p>
+        <p style={styles.text}>
+          As an Amazon Associate I earn from qualifying purchases.
         </p>
         <p style={styles.text}>
           For questions about this site, visit the Flyby Shine homepage:
           {" "}
-          <a href="/" style={styles.link}>flyby-amazon-public-xc7v.vercel.app</a>
+          <Link href="/" style={styles.link}>flyby-amazon-public-xc7v.vercel.app</Link>
         </p>
       </div>
     </main>
