@@ -11,15 +11,38 @@ export default function PrivacyPage() {
         <h1 style={styles.title}>Privacy Policy</h1>
         <p style={styles.text}>
           This site shares Flyby Shine digital product, book and affiliate gear resources. It does
-          not intentionally collect personal information through forms or user accounts.
+          not offer public user accounts or public profile features.
         </p>
         <p style={styles.text}>
           Like most websites, basic hosting logs may be processed by the platform operator
           to keep the site available and secure.
         </p>
         <p style={styles.text}>
+          If a Flyby Shine operator connects a TikTok account to the Flyby Shine TikTok Publisher,
+          the app may process TikTok OAuth authorization data and TikTok account data allowed by the
+          approved scopes. This can include the authorized account identifier, display/profile
+          fields, account-level stats, public video list, uploaded video file, caption and resulting
+          upload or publish status.
+        </p>
+        <p style={styles.text}>
+          Flyby Shine uses that TikTok data only to confirm the connected account, upload or publish
+          approved Flyby Shine videos, verify the result and troubleshoot the publishing workflow.
+          The integration is not intended for public users, selling personal data or unrelated
+          advertising use.
+        </p>
+        <p style={styles.text}>
+          Operational records are kept only as long as needed for publishing proof, troubleshooting,
+          compliance and normal business records. A connected TikTok account can be disconnected by
+          revoking the authorization in TikTok or by contacting Flyby Shine to request deletion of
+          retained integration records where deletion is legally and operationally available.
+        </p>
+        <p style={styles.text}>
           If you click a Gumroad, Amazon, Apple Podcasts or other third-party link, that destination
           applies its own privacy practices.
+        </p>
+        <p style={styles.text}>
+          Privacy or deletion requests can be sent to Flyby Shine through the contact options listed
+          at flybyshine.com.
         </p>
       </div>
     </main>
