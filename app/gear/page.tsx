@@ -1,26 +1,23 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { TrackedAmazonLink } from "../components/tracked-amazon-link";
 import { JsonLd, PageShell, styles } from "../lib/ui";
-import { gearLists, siteUrl } from "../lib/site-content";
+import { gearMissions, siteUrl } from "../lib/site-content";
 
 export const metadata: Metadata = {
   title: "Drone Cleaning Gear Lists | Flyby Shine",
   description:
-    "Flyby Shine Amazon affiliate gear lists for drone cleaning, pure water systems, safety, Part 107 training, hoses, pressure washing and field support.",
+    "Four focused Amazon affiliate gear lists for operator safety, pure water work, field repairs and drone-cleaning training.",
   alternates: { canonical: "/gear" },
   openGraph: {
     title: "Drone Cleaning Gear Lists | Flyby Shine",
     description:
-      "Affiliate gear lists for operators who have already validated the business case, pricing and field plan.",
+      "Problem-led gear lists for safety, pure water work, field repairs and operator training.",
     url: `${siteUrl}/gear`,
     type: "website",
   },
 };
 
 export default function GearPage() {
-  const featured = gearLists.filter((item) => item.featured);
-  const rest = gearLists.filter((item) => !item.featured);
-
   return (
     <PageShell>
       <JsonLd
@@ -37,75 +34,87 @@ export default function GearPage() {
       <section style={{ ...styles.section, paddingBottom: 36 }}>
         <div style={styles.container}>
           <p style={styles.eyebrow}>Affiliate gear hub</p>
-          <h1 style={styles.h1}>Gear comes after validation.</h1>
+          <h1 style={styles.h1}>Start with the job problem.</h1>
           <p style={styles.lead}>
-            These Amazon lists support drone cleaning and exterior cleaning operations. Use them
-            after the market, margin, job fit, training and safety path are clear.
+            Pick the one list that matches the work in front of you. Each list is intentionally
+            narrow so you can compare fewer items, check compatibility and avoid buying a pile of
+            disconnected gear.
           </p>
           <p style={{ ...styles.disclosure, marginTop: 28 }}>
-            As an Amazon Associate I earn from qualifying purchases. Product availability, pricing
-            and list contents can change on Amazon.
+            As an Amazon Associate I earn from qualifying purchases. Every Amazon button below is
+            a paid link. Product availability, pricing and list contents can change on Amazon.
           </p>
         </div>
       </section>
 
       <section style={{ ...styles.section, paddingTop: 44 }}>
         <div style={styles.container}>
-          <p style={styles.eyebrow}>Start here</p>
-          <h2 style={styles.h2}>Most referenced lists.</h2>
-          <div style={styles.grid3}>
-            {featured.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                style={{ ...styles.card, color: "inherit", textDecoration: "none" }}
-              >
-                {item.image ? (
-                  <Image
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    width={720}
-                    height={450}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      aspectRatio: "16 / 10",
-                      objectFit: "cover",
-                      border: "1px solid #242424",
-                      marginBottom: 18,
-                    }}
-                  />
-                ) : null}
-                <span style={styles.tag}>Amazon list</span>
-                <h2 style={styles.h3}>{item.label}</h2>
-                <p style={styles.body}>{item.description}</p>
-              </a>
+          <p style={styles.eyebrow}>Four buying missions</p>
+          <h2 style={styles.h2}>Choose by outcome, not category.</h2>
+          <div
+            style={{
+              ...styles.grid2,
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 440px), 1fr))",
+            }}
+          >
+            {gearMissions.map((mission) => (
+              <article key={mission.slug} style={styles.card}>
+                <span style={styles.tag}>Operator-curated Amazon list</span>
+                <h2 style={styles.h3}>{mission.label}</h2>
+                <p style={{ ...styles.body, color: "#f4ead0", fontWeight: 750 }}>
+                  {mission.problem}
+                </p>
+                <p style={styles.body}>{mission.description}</p>
+                <p style={styles.upsell}>
+                  <strong>Best for:</strong> {mission.bestFor}
+                </p>
+
+                <div style={{ ...styles.grid2, marginTop: 20 }}>
+                  <div>
+                    <p style={styles.tag}>What to expect</p>
+                    <ul style={styles.list}>
+                      {mission.includes.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p style={styles.tag}>Verify before buying</p>
+                    <ul style={styles.list}>
+                      {mission.verify.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div style={styles.ctaRow}>
+                  <TrackedAmazonLink
+                    href={mission.href}
+                    mission={mission.slug}
+                    style={styles.primaryCta}
+                  >
+                    Review on Amazon — paid link
+                  </TrackedAmazonLink>
+                </div>
+                <p style={{ ...styles.footerText, marginTop: 16 }}>
+                  List reviewed October 14, 2026. Amazon tracking: {mission.trackingId}
+                </p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       <section style={styles.section}>
-        <div style={styles.container}>
-          <p style={styles.eyebrow}>All categories</p>
-          <h2 style={styles.h2}>Open the category that matches the work.</h2>
-          <div style={styles.grid3}>
-            {rest.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                style={{ ...styles.cardMuted, color: "inherit", textDecoration: "none" }}
-              >
-                <span style={styles.tag}>Affiliate list</span>
-                <h3 style={styles.h3}>{item.label}</h3>
-                <p style={styles.body}>{item.description}</p>
-              </a>
-            ))}
-          </div>
+        <div style={styles.narrow}>
+          <p style={styles.eyebrow}>Before you order</p>
+          <h2 style={styles.h2}>A list is a shortlist, not a system design.</h2>
+          <p style={styles.body}>
+            Confirm dimensions, pressure and chemical ratings, electrical requirements, current
+            FAA guidance and manufacturer instructions for your exact setup. Amazon reviews and
+            related-item suggestions are not substitutes for those checks.
+          </p>
         </div>
       </section>
     </PageShell>

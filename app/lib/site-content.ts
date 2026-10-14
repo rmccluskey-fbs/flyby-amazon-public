@@ -118,109 +118,65 @@ export const book = {
   ],
 };
 
-export type GearItem = {
+export type GearMission = {
+  slug: string;
   label: string;
   href: string;
+  trackingId: string;
+  problem: string;
   description: string;
-  featured?: boolean;
-  image?: { src: string; alt: string };
+  bestFor: string;
+  includes: string[];
+  verify: string[];
 };
 
-export const gearLists: GearItem[] = [
+export const gearMissions: GearMission[] = [
   {
-    label: "Pure Water System",
-    href: "https://www.amazon.com/hz/wishlist/ls/1H4JTXO0Y7F8S?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=b0183681b581cb2a81f9ec3d074fd637&language=en_US&ref_=as_li_ss_tl",
+    slug: "safety-proof",
+    label: "Operator Safety + Jobsite Proof Kit",
+    href: "https://www.amazon.com/shop/fbs2026/list/2SD2JINK8WU21?tag=flybysafety-20",
+    trackingId: "flybysafety-20",
+    problem: "Protect the crew and document what happened before, during and after the job.",
     description:
-      "Water-fed and DI gear to review after the job type and recurring account model make sense.",
-    featured: true,
-    image: { src: "/di.png", alt: "Pure water system gear" },
+      "A focused starting point for basic site protection, operator visibility and photo or video proof.",
+    bestFor: "Operators building a repeatable preflight, jobsite and closeout routine.",
+    includes: ["Basic PPE and visibility", "Jobsite documentation support", "Compact field essentials"],
+    verify: ["Your written safety plan", "Chemical label and SDS requirements", "Site-specific PPE rules"],
   },
   {
-    label: "FAA 107 License Training",
-    href: "https://www.amazon.com/hz/wishlist/ls/2GU017CJAKIKT?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=be5c757b9c5e4d79e7dd848e2b370d39&language=en_US&ref_=as_li_ss_tl",
+    slug: "pure-water",
+    label: "Pure Water Starter Kit",
+    href: "https://www.amazon.com/shop/fbs2026/list/WBJUOB3K69WU?tag=flybywater-20",
+    trackingId: "flybywater-20",
+    problem: "Reduce spotting and rework when the job calls for purified-water finishing.",
     description:
-      "Training resources for operators who need to handle the aviation side properly.",
-    featured: true,
-    image: { src: "/107training.png", alt: "FAA Part 107 training resources" },
+      "Core water-system references for evaluating a small pure-water workflow before building a larger rig.",
+    bestFor: "Window and exterior-cleaning operators testing recurring maintenance work.",
+    includes: ["Water movement and filtration references", "Connections and supporting hardware", "Starter-scale system components"],
+    verify: ["Feed-water quality and pressure", "Required flow rate", "Thread, hose and fitting compatibility"],
   },
   {
-    label: "Tools",
-    href: "https://www.amazon.com/hz/wishlist/ls/1ZKWXQ14PE50U?&linkCode=ll2&tag=fbs2026-20&linkId=c20be901eba415689a55983fc4cd43e1&language=en_US&ref_=as_li_ss_tl",
+    slug: "field-repair",
+    label: "Field Repair + Hose Essentials",
+    href: "https://www.amazon.com/shop/fbs2026/list/15T8PGWOOLRP7?tag=flybyrepair-20",
+    trackingId: "flybyrepair-20",
+    problem: "Avoid losing a workday to a small failed fitting, loose connection or damaged hose.",
     description:
-      "General field tools that support setup, maintenance and jobsite problem solving.",
-    featured: true,
-    image: { src: "/cordlessscrewdriver.png", alt: "Field tools" },
+      "A compact repair-and-connection list for the ordinary failure points that can stop a field setup.",
+    bestFor: "Operators assembling a labeled field repair bin for service calls.",
+    includes: ["Common hand-tool references", "Hose and connection support", "Small-job hardware"],
+    verify: ["Pressure and chemical rating", "Exact thread and fitting size", "Compatibility with your installed system"],
   },
   {
-    label: "Content Creation",
-    href: "https://www.amazon.com/hz/wishlist/ls/1I0Y6OXI7ZQLZ?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=3a2f2a07b452b6d9395e9836c18b3c29&language=en_US&ref_=as_li_ss_tl",
+    slug: "books-training",
+    label: "Drone Cleaning Books + Operator Tools",
+    href: "https://www.amazon.com/shop/fbs2026/list/1GJ31JAP6QMUW?tag=flybybooks-20",
+    trackingId: "flybybooks-20",
+    problem: "Learn the business fundamentals before spending heavily on equipment.",
     description:
-      "Media gear for documenting proof, building authority and supporting marketing.",
-  },
-  {
-    label: "Safety",
-    href: "https://www.amazon.com/hz/wishlist/ls/16K9807ZS33HH?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=39a7d69d22234700e3472bea80556ee4&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Safety equipment to review before field work, chemical handling or site exposure.",
-  },
-  {
-    label: "Proportioner",
-    href: "https://www.amazon.com/hz/wishlist/ls/26EBKYHMPXTHW?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=6efe0f5cb63f2efda8737aa2949be018&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Soft-wash proportioning items for operators already clear on surface, mix and rinse requirements.",
-  },
-  {
-    label: "Drone Accessories and Must-Haves",
-    href: "https://www.amazon.com/hz/wishlist/ls/3TPDRI91FKG0Q?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=d59e9ebee89ff026dbc219028560f956&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Accessories to review after the business case and equipment path are validated.",
-  },
-  {
-    label: "Chemicals",
-    href: "https://www.amazon.com/hz/wishlist/ls/3MS2QVUB896E6?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=700ba00d81ba66fbdc5731380d80c4fe&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Chemical-related items. Always confirm label, SDS and surface compatibility before use.",
-  },
-  {
-    label: "Pressure Wash",
-    href: "https://www.amazon.com/hz/wishlist/ls/20T5HHTUCN2MN?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=66c5f2c242dd3de77c71ce4f83905928&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Pressure washing support gear for operators who also handle ground-based exterior cleaning.",
-  },
-  {
-    label: "Tanks",
-    href: "https://www.amazon.com/hz/wishlist/ls/3UZKE4CWQJMZU?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=37326092c52935a1dcd47d4bc05797db&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Tank and storage references for planning rigs, water, mix handling and field logistics.",
-  },
-  {
-    label: "Clothing/Gear",
-    href: "https://www.amazon.com/hz/wishlist/ls/1UU3QA6EZOBXQ?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=072a97139b2e0c6b307446c4ec94dea4&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Workwear and support gear for field comfort, appearance and basic protection.",
-  },
-  {
-    label: "Hoses",
-    href: "https://www.amazon.com/hz/wishlist/ls/WBWEZNF36JWC?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=73e7c267c8456b808f313e8b3699edb5&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Hose options for drone and non-drone work where setup time and handling affect margin.",
-  },
-  {
-    label: "Window Cleaning",
-    href: "https://www.amazon.com/hz/wishlist/ls/ZY1SYKSU3BMY?leftNavSection=Reorder&source=leftnav&linkCode=ll2&tag=fbs2026-20&linkId=149f9c739f1bb12bbdbeaea365854b6c&language=en_US&ref_=as_li_ss_tl",
-    description:
-      "Window cleaning gear for operators comparing drone access with recurring maintenance accounts.",
-  },
-  {
-    label: "Electrical",
-    href: amazonStorefrontUrl,
-    description:
-      "Storefront fallback for electrical support items. Confirm fit and ratings before purchase.",
-  },
-  {
-    label: "Misc",
-    href: amazonStorefrontUrl,
-    description:
-      "Storefront fallback for field support items that do not fit a primary category.",
+      "Flyby-authored field guides and a compact set of practical exterior-cleaning tools for operators validating the work and planning the business.",
+    bestFor: "New operators who need a lower-cost learning path before an equipment decision.",
+    includes: ["Drone-cleaning business guidance", "Exterior-cleaning field references", "Selected operator tools"],
+    verify: ["Edition and publication date", "Tool dimensions and ratings", "Compatibility with your field setup"],
   },
 ];
