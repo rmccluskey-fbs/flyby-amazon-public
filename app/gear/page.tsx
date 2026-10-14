@@ -6,12 +6,12 @@ import { gearMissions, siteUrl } from "../lib/site-content";
 export const metadata: Metadata = {
   title: "Drone Cleaning Gear Lists | Flyby Shine",
   description:
-    "Four focused Amazon affiliate gear lists for operator safety, pure water work, field repairs and drone-cleaning training.",
+    "Five focused Amazon affiliate lists for operator safety, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
   alternates: { canonical: "/gear" },
   openGraph: {
     title: "Drone Cleaning Gear Lists | Flyby Shine",
     description:
-      "Problem-led gear lists for safety, pure water work, field repairs and operator training.",
+      "Problem-led lists for safety, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
     url: `${siteUrl}/gear`,
     type: "website",
   },
@@ -49,7 +49,7 @@ export default function GearPage() {
 
       <section style={{ ...styles.section, paddingTop: 44 }}>
         <div style={styles.container}>
-          <p style={styles.eyebrow}>Four buying missions</p>
+          <p style={styles.eyebrow}>Five buying missions</p>
           <h2 style={styles.h2}>Choose by outcome, not category.</h2>
           <div
             style={{

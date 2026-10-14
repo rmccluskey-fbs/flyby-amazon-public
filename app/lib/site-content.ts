@@ -169,14 +169,26 @@ export const gearMissions: GearMission[] = [
   },
   {
     slug: "books-training",
-    label: "Drone Cleaning Books + Operator Tools",
-    href: "https://www.amazon.com/shop/fbs2026/list/1GJ31JAP6QMUW?tag=flybybooks-20",
+    label: "Flyby Drone Cleaning Books",
+    href: "https://www.amazon.com/shop/fbs2026/list/264SUQAODE21X?tag=flybybooks-20",
     trackingId: "flybybooks-20",
     problem: "Learn the business fundamentals before spending heavily on equipment.",
     description:
-      "Flyby-authored field guides and a compact set of practical exterior-cleaning tools for operators validating the work and planning the business.",
+      "Flyby-authored guides for operators and facility teams evaluating drone cleaning, commercial maintenance, budgets and soft-wash decisions.",
     bestFor: "New operators who need a lower-cost learning path before an equipment decision.",
-    includes: ["Drone-cleaning business guidance", "Exterior-cleaning field references", "Selected operator tools"],
-    verify: ["Edition and publication date", "Tool dimensions and ratings", "Compatibility with your field setup"],
+    includes: ["Drone-cleaning business guidance", "Facility-buyer decision support", "Soft-wash chemistry fundamentals"],
+    verify: ["Format and edition", "Fit for your role and experience", "Current rules and manufacturer guidance"],
+  },
+  {
+    slug: "part-107-study",
+    label: "Part 107 Study Resources",
+    href: "https://www.amazon.com/shop/fbs2026/list/1JJI9JHRTE56F?tag=flybybooks-20",
+    trackingId: "flybybooks-20",
+    problem: "Build a current study plan instead of relying on one book or video.",
+    description:
+      "A focused pair of FAA study resources to use alongside the current ACS, official sample questions and FAA certification steps.",
+    bestFor: "New and aspiring commercial drone pilots preparing for the Part 107 knowledge test.",
+    includes: ["FAA Remote Pilot Study Guide", "Airman Knowledge Testing Supplement", "A simple study-stack starting point"],
+    verify: ["Current FAA ACS", "Current sample questions", "Current certification requirements on FAA.gov"],
   },
 ];
