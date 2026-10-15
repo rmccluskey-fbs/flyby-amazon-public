@@ -1,8 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { siteUrl } from "../lib/site-content";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Flyby Shine | Terms",
   description: "Terms of use for the Flyby Shine revenue resource site.",
+  alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Flyby Shine | Terms",
+    description: "Terms of use for the Flyby Shine revenue resource site.",
+    url: `${siteUrl}/terms`,
+    type: "website",
+  },
 };
 
 export default function TermsPage() {

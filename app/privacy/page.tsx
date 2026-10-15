@@ -1,6 +1,16 @@
-export const metadata = {
+import type { Metadata } from "next";
+import { siteUrl } from "../lib/site-content";
+
+export const metadata: Metadata = {
   title: "Flyby Shine | Privacy",
   description: "Privacy policy for the Flyby Shine revenue resource site.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Flyby Shine | Privacy",
+    description: "Privacy policy for the Flyby Shine revenue resource site.",
+    url: `${siteUrl}/privacy`,
+    type: "website",
+  },
 };
 
 export default function PrivacyPage() {
