@@ -26,7 +26,7 @@ export default function TermsPage() {
         <p style={styles.text}>
           For questions about this site, visit the Flyby Shine homepage:
           {" "}
-          <Link href="/" style={styles.link}>flyby-amazon-public-xc7v.vercel.app</Link>
+          <Link href="/" style={styles.link}>flyby-books.vercel.app</Link>
         </p>
       </div>
     </main>

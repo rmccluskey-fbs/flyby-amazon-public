@@ -1,4 +1,4 @@
-export const siteUrl = "https://flyby-amazon-public-xc7v.vercel.app";
+export const siteUrl = "https://flyby-books.vercel.app";
 
 export const gumroadUrl = "https://flybyshine.gumroad.com/l/yuitax";
 export const amazonBookUrl = "https://www.amazon.com/dp/B0H148FF27";
