@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteUrl } from "../lib/site-content";
+import { defaultSocialImage, siteUrl } from "../lib/site-content";
 
 export const metadata: Metadata = {
   title: "Flyby Shine | Privacy",
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Flyby Shine | Privacy",
     description: "Privacy policy for the Flyby Shine revenue resource site.",
     url: `${siteUrl}/privacy`,
+    images: [defaultSocialImage],
     type: "website",
   },
 };

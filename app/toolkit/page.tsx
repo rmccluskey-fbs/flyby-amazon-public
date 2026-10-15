@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CtaRow, HeroImage, JsonLd, PageShell, styles } from "../lib/ui";
-import { gumroadUrl, siteUrl, toolkit } from "../lib/site-content";
+import { defaultSocialImage, gumroadUrl, siteUrl, toolkit } from "../lib/site-content";
 
 export const metadata: Metadata = {
   title: "Drone Cleaning Complete Business Toolkit | Flyby Shine",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Plan startup costs, pricing, sales, SOPs and field risk before buying drone cleaning equipment.",
     url: `${siteUrl}/toolkit`,
+    images: [defaultSocialImage],
     type: "website",
   },
 };

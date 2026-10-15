@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { siteUrl } from "./lib/site-content";
+import { defaultSocialImage, siteUrl } from "./lib/site-content";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   },
   description:
     "Flyby Shine resources for drone cleaning startup planning, pricing, field operations, books and affiliate gear lists.",
+  openGraph: {
+    siteName: "Flyby Shine Revenue Hub",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [defaultSocialImage.url],
+  },
   robots: {
     index: true,
     follow: true,

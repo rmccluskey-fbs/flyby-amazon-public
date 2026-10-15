@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { siteUrl } from "../lib/site-content";
+import { defaultSocialImage, siteUrl } from "../lib/site-content";
 
 export const metadata: Metadata = {
   title: "Flyby Shine | Terms",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: "Flyby Shine | Terms",
     description: "Terms of use for the Flyby Shine revenue resource site.",
     url: `${siteUrl}/terms`,
+    images: [defaultSocialImage],
     type: "website",
   },
 };

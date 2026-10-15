@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd, PageShell, styles } from "../lib/ui";
-import { siteUrl } from "../lib/site-content";
+import { defaultSocialImage, siteUrl } from "../lib/site-content";
 
 const pageUrl = `${siteUrl}/tiktok-publisher`;
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "How Flyby Shine uploads approved commercial cleaning videos to TikTok through the Content Posting API.",
     url: pageUrl,
     siteName: "Flyby Shine Revenue Hub",
+    images: [defaultSocialImage],
     type: "website",
   },
 };

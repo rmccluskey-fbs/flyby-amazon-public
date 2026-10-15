@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { TrackedAmazonLink } from "../components/tracked-amazon-link";
 import { CtaRow, HeroImage, JsonLd, PageShell, styles } from "../lib/ui";
-import { amazonBookUrl, book, siteUrl } from "../lib/site-content";
+import { amazonBookUrl, book, defaultSocialImage, siteUrl } from "../lib/site-content";
 
 export const metadata: Metadata = {
   title: "Mastering Drone-Based Exterior Cleaning | Flyby Shine Book",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     description:
       "Start with the book, then use the toolkit when you need calculators, templates and operating tools.",
     url: `${siteUrl}/book`,
+    images: [defaultSocialImage],
     type: "book",
   },
 };
@@ -58,14 +60,26 @@ export default function BookPage() {
           <p style={styles.eyebrow}>Book and authority path</p>
           <h1 style={styles.h1}>{book.title}</h1>
           <p style={styles.lead}>{book.subtitle}</p>
+          <p style={{ ...styles.disclosure, marginTop: 28 }}>
+            As an Amazon Associate I earn from qualifying purchases.
+          </p>
           <div style={styles.ctaRow}>
-            <a href={amazonBookUrl} style={styles.primaryCta}>
+            <TrackedAmazonLink
+              href={amazonBookUrl}
+              mission="books-training"
+              item="B0H148FF27"
+              placement="book-hero"
+              style={styles.primaryCta}
+            >
               View on Amazon
-            </a>
+            </TrackedAmazonLink>
             <a href="/toolkit" style={styles.secondaryCta}>
               Compare toolkit
             </a>
           </div>
+          <p style={{ ...styles.footerText, marginTop: 14, color: "#d6cab0" }}>
+            Paid link. We may earn a commission from qualifying purchases.
+          </p>
         </div>
       </section>
 

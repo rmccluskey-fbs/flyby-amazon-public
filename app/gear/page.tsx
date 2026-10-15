@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { TrackedAmazonLink } from "../components/tracked-amazon-link";
 import { JsonLd, PageShell, styles } from "../lib/ui";
-import { gearMissions, siteUrl } from "../lib/site-content";
+import { gearMissions, gearSocialImage, siteUrl } from "../lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Drone Cleaning Gear Lists | Flyby Shine",
+  title: "Drone Cleaning Gear and Books | Flyby Shine",
   description:
-    "Five focused Amazon affiliate lists for operator safety, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
+    "Focused recommendations for system checks, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
   alternates: { canonical: "/gear" },
   openGraph: {
-    title: "Drone Cleaning Gear Lists | Flyby Shine",
+    title: "Drone Cleaning Gear and Books | Flyby Shine",
     description:
-      "Problem-led lists for safety, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
+      "Problem-led recommendations for system checks, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
     url: `${siteUrl}/gear`,
+    images: [gearSocialImage],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Drone Cleaning Gear and Books | Flyby Shine",
+    description:
+      "Problem-led recommendations for system checks, pure water work, field repairs, drone-cleaning books and Part 107 study resources.",
+    images: [gearSocialImage.url],
   },
 };
 
@@ -44,6 +53,17 @@ export default function GearPage() {
             As an Amazon Associate I earn from qualifying purchases. Every Amazon button below is
             a paid link. Product availability, pricing and list contents can change on Amazon.
           </p>
+          <div style={styles.ctaRow} aria-label="Choose a buying mission">
+            {gearMissions.map((mission) => (
+              <Link
+                key={mission.slug}
+                href={`/gear/${mission.slug}`}
+                style={styles.secondaryCta}
+              >
+                {mission.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -89,14 +109,22 @@ export default function GearPage() {
                 </div>
 
                 <div style={styles.ctaRow}>
+                  <Link href={`/gear/${mission.slug}`} style={styles.primaryCta}>
+                    Compare {mission.products.length} focused options
+                  </Link>
                   <TrackedAmazonLink
                     href={mission.href}
                     mission={mission.slug}
-                    style={styles.primaryCta}
+                    item="full-list"
+                    placement="gear-hub-card"
+                    style={styles.secondaryCta}
                   >
-                    Review on Amazon — paid link
+                    View on Amazon
                   </TrackedAmazonLink>
                 </div>
+                <p style={{ ...styles.footerText, marginTop: 14, color: "#d6cab0" }}>
+                  Paid link. We may earn a commission from qualifying purchases.
+                </p>
                 <p style={{ ...styles.footerText, marginTop: 16 }}>
                   List reviewed October 14, 2026. Amazon tracking: {mission.trackingId}
                 </p>
